@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.iukhimenko'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.6.0'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.20.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    implementation group: 'io.appium', name: 'java-client', version: '7.5.1'
+    implementation group: 'org.aeonbits.owner', name: 'owner-java8', version: '1.0.12'
+    compile 'org.apache.logging.log4j:log4j-api:2.12.1'
+    compile 'org.apache.logging.log4j:log4j-core:2.12.1'
+    compile 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.10'
+}
+
+test {
+    useJUnitPlatform()
+}
